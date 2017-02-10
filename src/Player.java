@@ -3,6 +3,6 @@
  */
 public abstract class Player {
 
-    public abstract void pick();
+    public abstract String pick();
 
 }

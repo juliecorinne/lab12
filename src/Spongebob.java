@@ -6,17 +6,16 @@
 public class Spongebob extends Player {
 
     @Override
-    public void pick() {
+    public String pick() {
 
         int n = (int) (Math.random() * 3 + 1);
 
-        if (n == 1) {
-            System.out.println("R");
-        } else if (n == 2) {
-            System.out.println("P");
-        } else {
-            System.out.println("S");
-        }
+        if (n == 1)
+            return "R";
+         else if (n == 2)
+            return "P";
+         else
+            return "S";
 
     }
 

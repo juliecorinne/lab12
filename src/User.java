@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -7,20 +8,19 @@ public class User extends Player {
 
 
     @Override
-    public void pick() {
+    public String pick() {
         Scanner scan = new Scanner(System.in);
 
-
         System.out.println("Great! Alright, now, Rock, Paper, or Scissors? Please type R, P, or S: ");
-        char pick = scan.next().charAt(0);
+        String pick = scan.nextLine();
         System.out.println();
 
-        if (pick == 'R') {
-            System.out.println("R");
-        } else if (pick == 'P') {
-            System.out.println("P");
+        if (Objects.equals(pick, "R")) {
+            return "R";
+        } else if (Objects.equals(pick, "P")) {
+            return "P";
         } else {
-            System.out.println("S");
+            return "S";
         }
 
     }

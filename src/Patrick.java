@@ -5,9 +5,9 @@ public class Patrick extends Player {
 
 
     @Override
-    public void pick() {
+    public String pick() {
 
-        System.out.println("R");
+        return "R";
 
     }
 
