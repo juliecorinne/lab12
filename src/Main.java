@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -20,18 +21,6 @@ public class Main {
 
             user.pick();
             spongebob.pick();
-
-            if (spongebob.pick() == user.pick()){
-                System.out.println("It's a tie!");
-            } else if (spongebob.pick() == "R" && user.pick() == "P"){
-                System.out.println("Spongebob wins!");
-            } else if (spongebob.pick() == "P" && user.pick() == "R"){
-                System.out.println("You win!");
-            } else if (spongebob.pick() == "S" && user.pick() == "R"){
-                System.out.println("You win!");
-            } else if (spongebob.pick() == "R" && user.pick() == "S"){
-                System.out.println("Spongebob wins!");
-            }
 
         } else {
 
