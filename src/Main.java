@@ -12,14 +12,13 @@ public class Main {
         User user = new User();
         String userInput;
 
-
         rules();
+
+        do {
 
         System.out.println("Who would you like to play against? Type 1 for Spongebob or 2 for Patrick.");
         team = scan.nextInt();
         System.out.println();
-
-        do {
 
         playGame(team, spongebob, patrick, user);
 
