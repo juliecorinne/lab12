@@ -5,9 +5,9 @@ public class Patrick extends Player {
 
 
     @Override
-    public String pick() {
+    public Roshambo pick() {
 
-        return "R";
+        return Roshambo.Rock;
 
     }
 

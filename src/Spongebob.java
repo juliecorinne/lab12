@@ -6,16 +6,16 @@
 public class Spongebob extends Player {
 
     @Override
-    public String pick() {
+    public Roshambo pick() {
 
         int n = (int) (Math.random() * 3 + 1);
 
         if (n == 1)
-            return "R";
+            return Roshambo.Rock;
          else if (n == 2)
-            return "P";
+            return Roshambo.Paper;
          else
-            return "S";
+            return Roshambo.Scissors;
 
     }
 

@@ -28,6 +28,7 @@ public class Main {
 
         } while (userInput.equalsIgnoreCase("y"));
 
+        System.out.println();
         System.out.println("Thanks for playing!");
 
     }
@@ -36,8 +37,8 @@ public class Main {
 
         if (team == 1) {
 
-            String userPick = user.pick();
-            String team1 = spongebob.pick();
+            Roshambo userPick = user.pick();
+            Roshambo team1 = spongebob.pick();
 
             System.out.println("You picked " + userPick);
             System.out.println("Spongebob picked " + team1);
@@ -47,8 +48,8 @@ public class Main {
 
         } else {
 
-            String userPick = user.pick();
-            String team2 = patrick.pick();
+            Roshambo userPick = user.pick();
+            Roshambo team2 = patrick.pick();
 
             System.out.println("You picked " + userPick);
             System.out.println("Patrick picked " + team2);
@@ -59,36 +60,68 @@ public class Main {
         }
     }
 
-    public static void patrickIfElse(String userPick, String team2) {
+    public static void patrickIfElse(Roshambo userPick, Roshambo team2) {
 
-        if (Objects.equals(userPick, team2)) {
+        if (userPick == team2) {
             System.out.println("It's a tie!");
-        } else if (Objects.equals(userPick, "S") && Objects.equals(team2, "R")) {
+        } else if (userPick == Roshambo.Scissors && team2 == Roshambo.Rock){
             System.out.println("Patrick wins!");
-        } else if (Objects.equals(userPick, "P") && Objects.equals(team2, "R")) {
+        } else if (userPick == Roshambo.Paper && team2 == Roshambo.Rock){
             System.out.println("You win!");
         }
         System.out.println();
+
+        //above method using enums
+
+//        if (Objects.equals(userPick, team2)) {
+//            System.out.println("It's a tie!");
+//        } else if (Objects.equals(userPick, "S") && Objects.equals(team2, "R")) {
+//            System.out.println("Patrick wins!");
+//        } else if (Objects.equals(userPick, "P") && Objects.equals(team2, "R")) {
+//            System.out.println("You win!");
+//        }
+//        System.out.println();
     }
 
-    public static void spongebobIfElse(String userPick, String team1) {
+    public static void spongebobIfElse(Roshambo userPick, Roshambo team1) {
 
-        if (Objects.equals(userPick, team1)) {
+        if (userPick == team1) {
             System.out.println("It's a tie!");
-        } else if (Objects.equals(userPick, "R") && Objects.equals(team1, "S")) {
+        } else if (userPick == Roshambo.Rock && team1 == Roshambo.Scissors){
             System.out.println("You win!");
-        } else if (Objects.equals(userPick, "S") && Objects.equals(team1, "R")) {
+        } else if (userPick == Roshambo.Scissors && team1 == Roshambo.Rock){
             System.out.println("Spongebob wins!");
-        } else if (Objects.equals(userPick, "P") && Objects.equals(team1, "S")) {
+        } else if (userPick == Roshambo.Paper && team1 == Roshambo.Scissors){
             System.out.println("Spongebob wins!");
-        } else if (Objects.equals(userPick, "S") && Objects.equals(team1, "P")) {
+        } else if (userPick == Roshambo.Scissors && team1 == Roshambo.Paper){
             System.out.println("You win!");
-        } else if (Objects.equals(userPick, "P") && Objects.equals(team1, "R")) {
+        } else if (userPick == Roshambo.Paper && team1 == Roshambo.Rock){
             System.out.println("You win!");
-        } else if (Objects.equals(userPick, "R") && Objects.equals(team1, "P")) {
+        } else if (userPick == Roshambo.Rock && team1 == Roshambo.Paper){
             System.out.println("Spongebob wins!");
         }
         System.out.println();
+
+        //above is the if else statements using enums
+
+//        if (Objects.equals(userPick, team1)) {
+//            System.out.println("It's a tie!");
+//        } else if (Objects.equals(userPick, "R") && Objects.equals(team1, "S")) {
+//            System.out.println("You win!");
+//        } else if (Objects.equals(userPick, "S") && Objects.equals(team1, "R")) {
+//            System.out.println("Spongebob wins!");
+//        } else if (Objects.equals(userPick, "P") && Objects.equals(team1, "S")) {
+//            System.out.println("Spongebob wins!");
+//        } else if (Objects.equals(userPick, "S") && Objects.equals(team1, "P")) {
+//            System.out.println("You win!");
+//        } else if (Objects.equals(userPick, "P") && Objects.equals(team1, "R")) {
+//            System.out.println("You win!");
+//        } else if (Objects.equals(userPick, "R") && Objects.equals(team1, "P")) {
+//            System.out.println("Spongebob wins!");
+//        }
+//        System.out.println();
+
+
     }
 
     public static void rules() {

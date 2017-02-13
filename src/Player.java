@@ -3,6 +3,8 @@
  */
 public abstract class Player {
 
-    public abstract String pick();
+    public abstract Roshambo pick();
+
+
 
 }
