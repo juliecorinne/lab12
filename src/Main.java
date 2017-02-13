@@ -17,7 +17,8 @@ public class Main {
         do {
 
         System.out.println("Who would you like to play against? Type 1 for Spongebob or 2 for Patrick.");
-        team = scan.nextInt();
+        team = Validator.rangeValidator(1,2);
+//        team = scan.nextInt();
         System.out.println();
 
         playGame(team, spongebob, patrick, user);
