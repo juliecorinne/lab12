@@ -14,17 +14,19 @@ public class Main {
 
         rules();
 
+        System.out.println("Enter your name: ");
+        String name = scan.nextLine();
+        System.out.println("Hi " + name + "!");
+
         do {
 
         System.out.println("Who would you like to play against? Type 1 for Spongebob or 2 for Patrick.");
         team = Validator.rangeValidator(1,2);
-//        team = scan.nextInt();
         System.out.println();
 
         playGame(team, spongebob, patrick, user);
 
             System.out.println("Would you like to play again? y/n");
-            scan.nextLine();
             userInput = scan.nextLine();
 
         } while (userInput.equalsIgnoreCase("y"));

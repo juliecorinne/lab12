@@ -31,4 +31,20 @@ public class Validator {
         return input;
     }
 
+//    public static String letterValidator(){
+//
+//        Scanner scan = new Scanner(System.in);
+//
+//        String input = " ";
+//
+//        while (!input.equalsIgnoreCase("r" ) || !input.equalsIgnoreCase("p") || !input.equalsIgnoreCase("s")){
+//            System.out.println("Please enter R, P, or S!");
+//        }
+//
+//        return input;
+
+    // attempt to validate R P S
+
+
+
 }
