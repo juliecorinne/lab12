@@ -6,5 +6,4 @@ public abstract class Player {
     public abstract Roshambo pick();
 
 
-
 }

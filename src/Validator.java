@@ -31,19 +31,37 @@ public class Validator {
         return input;
     }
 
-//    public static String letterValidator(){
-//
-//        Scanner scan = new Scanner(System.in);
-//
-//        String input = " ";
-//
-//        while (!input.equalsIgnoreCase("r" ) || !input.equalsIgnoreCase("p") || !input.equalsIgnoreCase("s")){
-//            System.out.println("Please enter R, P, or S!");
-//        }
-//
-//        return input;
+    public static String letterValidator() {
+
+        Scanner scan = new Scanner(System.in);
+
+        while (!scan.hasNextLine()) {
+            scan.nextLine();
+            System.out.println("Please enter R, P, or S!");
+
+        }
+
+        return scan.nextLine();
+
+    }
 
     // attempt to validate R P S
+
+    public static String letterValidator(String r, String p, String s){
+        Scanner scan = new Scanner(System.in);
+        String input = " ";
+        r = "r";
+        p = "p";
+        s = "s";
+
+        while(!input.equalsIgnoreCase(r) || !input.equalsIgnoreCase(p) || !input.equalsIgnoreCase(s)){
+            System.out.println("Please enter R, P, or S!");
+            input = letterValidator();
+        }
+
+        return input;
+
+    }
 
 
 

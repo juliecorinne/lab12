@@ -12,7 +12,7 @@ public class User extends Player {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Great! Alright, now, Rock, Paper, or Scissors? Please type R, P, or S: ");
-        String pick = scan.nextLine();
+        String pick = Validator.letterValidator();
         System.out.println();
 
         if (pick.equalsIgnoreCase("R"))
